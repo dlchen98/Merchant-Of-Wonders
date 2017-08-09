@@ -1,0 +1,28 @@
+{
+  "name": "merchant of wonders",
+  "version": "1.0.0",
+  "description": "personal bns market bot",
+  "main": "merchantbot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/undeadfire/Merchant-Of-Wonders.git"
+  },
+  "keywords": [
+    "market",
+    "discord",
+    "bot"
+  ],
+  "author": "David Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/undeadfire/Merchant-Of-Wonders/issues"
+  },
+  "homepage": "https://github.com/undeadfire/Merchant-Of-Wonders#readme",
+  "dependencies": {
+    "discord.js": "^11.1.0"
+  },
+  "devDependencies": {}
+}
