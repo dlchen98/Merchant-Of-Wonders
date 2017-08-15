@@ -47,8 +47,8 @@ module.exports = {
     //   mongoItemName += "\"" + itemBit + "\" ";
     // });
 
-    //connect to the DB
-    mongodb.connect(settings.mongoURL, function(err, db) {
+    //connect to the mongoAtlas DB
+    mongodb.connect(settings.mongoURI, function(err, db) {
       //print db connection errors
       if (err) console.log(err);
 
@@ -76,7 +76,6 @@ module.exports = {
           res.once("data", function(itemData) {
             //parse the JSON to be readable
             requestBody = JSON.parse(itemData);
-            console.log(requestBody);
             //parse the JSON and send the msg
             me.sendEmbeddedMarketPrice(Discord, item.img, requestBody, msg);
           });

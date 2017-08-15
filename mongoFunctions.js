@@ -8,13 +8,13 @@ module.exports = {
       mongoItemName += "\"" + itemBit + "\" ";
     });
 
-    // Get the itemList collection
-    var collection = db.collection('itemList');
+    // Get the item collection
+    var collection = db.collection('items');
     // Find the item
     collection.findOne({$text: {$search : mongoItemName}}, function(err, item) {
       if (err) console.log(err);
       if (item==null) {
-        msg.channel.send("Couldn't find data for " + itemName);
+        msg.channel.send("Couldn't find data for " + itemName.join(' ') + ".");
         return;
       }
       callback(item);
