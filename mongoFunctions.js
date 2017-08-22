@@ -12,8 +12,10 @@ module.exports = {
     var collection = db.collection('items');
     // Find the item
     collection.findOne({$text: {$search : mongoItemName}}, function(err, item) {
+      //error finding item
       if (err) console.log(err);
-      if (item==null) {
+      //if no current market entries
+      if (item == null) {
         msg.channel.send("Couldn't find data for " + itemName.join(' ') + ".");
         return;
       }
